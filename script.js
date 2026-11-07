@@ -22,24 +22,27 @@ function createProductCard(product){
     card.classList.add("product-card");
     card.setAttribute("data-id", product.id); // Set the data-id attribute to the product id
 
-
+    // Create the image element
     const img = document.createElement("img");
     img.setAttribute("src", product.thumbnail);
     img.setAttribute("alt", product.title);
     img.setAttribute("data-id", product.id);
 
+    // Create the title element
     const title = document.createElement("h2");
     title.textContent = product.title;
 
+    // Create the price element
     const price = document.createElement("p");
     price.textContent = "$" + product.price;
 
+    // Create the button element
     const button = document.createElement("button");
     button.textContent = "+";
     button.setAttribute("data-id", product.id);
     button.setAttribute("data-title", product.title); 
     
-
+    // Append the elements to the card
     card.appendChild(img);
     card.appendChild(title);
     card.appendChild(price);
